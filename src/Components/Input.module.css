@@ -1,0 +1,25 @@
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  background-color: dodgerblue;
+  width: 25%;
+}
+
+.title {
+  margin-right: 10%;
+  color: white;
+}
+
+.add {
+  margin-left: 10%;
+  color: white;
+}
+
+.add:hover {
+    cursor: pointer;
+}

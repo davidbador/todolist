@@ -1,0 +1,25 @@
+.toDosSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.toDoItemWrapper {
+    width: 25%
+}
+
+.toDoItemWrapper:hover .trash{
+    display: inline;
+    background-color: red;
+    color: white
+}
+
+.trash {
+    float: left;
+    display: none;
+}
+
+.trash:hover {
+    cursor: pointer;
+}
