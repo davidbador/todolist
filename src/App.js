@@ -5,8 +5,7 @@ import AppContext from './AppContext';
 import './App.css';
 
 function App() {
-  const [value, updateValue] = useState('')
-  const [toDos, updateToDos] = useState([]);
+  const [toDos, setToDos] = useState([]);
 
   return (
     <div className="App">
@@ -14,18 +13,13 @@ function App() {
         handleToDoSubmit: (event, value) => {
           event.preventDefault()
           const addNew = [...toDos, value];
-          updateToDos(addNew)
-          updateValue('')
+          setToDos(addNew)
         },
-        handleInputChange: (event) => {
-          updateValue(event.target.value)
-        },
-        value: value,
         toDos: toDos,
         handleToDoDelete: (index) => {
           const list = [...toDos];
           list.splice(index, 1);
-          updateToDos(list);
+          setToDos(list);
         }
       }}>
         <Input></Input>
