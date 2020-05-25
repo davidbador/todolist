@@ -13,18 +13,14 @@ const Input = () => {
     }
 
     return (
-        <AppContext.Consumer>
-            {appContext => (
-                <div className={styles.formWrapper}>
-                    <form className={styles.form}>
-                        <div>
-                            <label className={styles.title}>To-Do List</label><span className={styles.add} onClick={submitContent}>&#65291;</span>
-                        </div>
-                        <input type="text" value={value} onChange={event => setValue(event.target.value)} />
-                    </form>
+        <div className={styles.formWrapper}>
+            <form className={styles.form}>
+                <div>
+                    <label className={styles.title}>To-Do List</label><span className={styles.add} onClick={submitContent}>&#65291;</span>
                 </div>
-            )}
-        </AppContext.Consumer>
+                <input type="text" value={value} onChange={event => setValue(event.target.value)} />
+            </form>
+        </div>
     )
 }
 
