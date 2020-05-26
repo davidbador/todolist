@@ -10,14 +10,17 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={{
-        handleToDoSubmit: (event, value) => {
-          event.preventDefault()
-          const addNew = [...toDos, value];
-          setToDos(addNew)
+        handleToDoSubmit: (value) => {
+          if (value === null || value === "") {
+            return false
+          } else {
+            let addNew = [...toDos, value];
+            setToDos(addNew)
+          }
         },
         toDos: toDos,
         handleToDoDelete: (index) => {
-          const list = [...toDos];
+          let list = [...toDos];
           list.splice(index, 1);
           setToDos(list);
         }
